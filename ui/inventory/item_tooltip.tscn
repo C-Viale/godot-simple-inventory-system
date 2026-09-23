@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bn1fq3ggxsko2"]
+
+[ext_resource type="Script" uid="uid://cikeaox4myp5i" path="res://ui/inventory/item_tooltip.gd" id="1_715v5"]
+[ext_resource type="Texture2D" uid="uid://dbk70xi64tob4" path="res://assets/items/placeholder.png" id="2_44agq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rd46"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.16470589, 0.43529412, 0.6627451, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6e2le"]
+color = Color(0.393186, 0.6660743, 0.91443217, 1)
+thickness = 4
+
+[node name="ItemTooltip" type="PanelContainer" unique_id=279173844]
+custom_minimum_size = Vector2(200, 126)
+propagate_maximum_size = false
+offset_right = 200.0
+offset_bottom = 126.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7rd46")
+script = ExtResource("1_715v5")
+metadata/_custom_type_script = "uid://cikeaox4myp5i"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1795113560]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=2006486161]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "<title>"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=136935177]
+custom_minimum_size = Vector2(72, 72)
+custom_maximum_size = Vector2(72, 72)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+texture = ExtResource("2_44agq")
+expand_mode = 2
+
+[node name="StatsSeparator" type="HSeparator" parent="VBoxContainer" unique_id=768797689]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_6e2le")
+
+[node name="StatsContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1915189198]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="DescriptionSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1739709052]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_6e2le")
+
+[node name="Description" type="RichTextLabel" parent="VBoxContainer" unique_id=855244601]
+layout_mode = 2
+text = "<description>"
+fit_content = true

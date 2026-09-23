@@ -1,0 +1,4 @@
+leather_cap     ;HELMET         ;1    ;Leather Cap    ;Light head protection.       ;leather_cap.png  ;
+cloth_shirt     ;CHESTPLATE     ;3    ;Cloth Shirt    ;Keeps the wind off.          ;cloth_shirt.png  ;
+plate_legs      ;LEGGINGS       ;2    ;Plate Legs     ;                             ;                 ;
+travel_boots    ;BOOTS          ;1    ;Travel Boots   ;Worn but reliable footwear.  ;travel_boots.png ;

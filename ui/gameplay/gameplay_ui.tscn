@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bcfumiogg1bl1"]
+
+[ext_resource type="Script" uid="uid://bf3eplngceipk" path="res://ui/gameplay/gameplay_ui.gd" id="1_a125d"]
+[ext_resource type="PackedScene" uid="uid://ck4pkbm3dox6d" path="res://ui/inventory/inventory_ui.tscn" id="2_dmi33"]
+
+[node name="GameplayUi" type="Control" unique_id=1905694299]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a125d")
+
+[node name="InventoryUI" parent="." unique_id=874226730 instance=ExtResource("2_dmi33")]
+layout_mode = 1

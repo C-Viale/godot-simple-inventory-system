@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://ck4pkbm3dox6d"]
+
+[ext_resource type="Script" uid="uid://br5dppnt4xanh" path="res://ui/inventory/inventory_ui.gd" id="1_6ch5n"]
+[ext_resource type="Theme" uid="uid://df5ekao7bsl6d" path="res://theme/ui_theme.tres" id="2_jm3eq"]
+[ext_resource type="PackedScene" uid="uid://bupxxghhv32vk" path="res://ui/inventory/equipment_slot.tscn" id="3_8a20s"]
+[ext_resource type="PackedScene" uid="uid://b8x0axiy50tks" path="res://ui/inventory/inventory_tabs.tscn" id="4_n6ryj"]
+[ext_resource type="PackedScene" uid="uid://bn1fq3ggxsko2" path="res://ui/inventory/item_tooltip.tscn" id="5_4l1op"]
+
+[node name="InventoryUi" type="Control" unique_id=874226730]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6ch5n")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=133220796]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1696902407]
+layout_mode = 2
+theme = ExtResource("2_jm3eq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer" unique_id=281946305]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer" unique_id=635120457]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="EquipmentSlot_Head" parent="MarginContainer/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1508230850 instance=ExtResource("3_8a20s")]
+layout_mode = 2
+size_flags_horizontal = 4
+slot_name = "Head"
+
+[node name="EquipmentSlot_Chest" parent="MarginContainer/PanelContainer/HBoxContainer/VBoxContainer" unique_id=310922786 instance=ExtResource("3_8a20s")]
+layout_mode = 2
+size_flags_horizontal = 4
+slot_id = 1
+slot_name = "Chest"
+
+[node name="EquipmentSlot_Legs" parent="MarginContainer/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1683730812 instance=ExtResource("3_8a20s")]
+layout_mode = 2
+size_flags_horizontal = 4
+slot_id = 2
+slot_name = "Legs"
+
+[node name="EquipmentSlot_Boots" parent="MarginContainer/PanelContainer/HBoxContainer/VBoxContainer" unique_id=258990178 instance=ExtResource("3_8a20s")]
+layout_mode = 2
+size_flags_horizontal = 4
+slot_id = 3
+slot_name = "Boots"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/PanelContainer/HBoxContainer" unique_id=715314836]
+layout_mode = 2
+
+[node name="InventoryTabs" parent="MarginContainer/PanelContainer/HBoxContainer" unique_id=1122406481 instance=ExtResource("4_n6ryj")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TEST_AddItemButton" type="Button" parent="." unique_id=41718148]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -38.5
+offset_top = -31.0
+offset_right = 38.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_jm3eq")
+text = "add item"
+
+[node name="ItemTooltip" parent="." unique_id=279173844 instance=ExtResource("5_4l1op")]
+process_mode = 4
+visible = false
+layout_mode = 0
+offset_right = 200.0

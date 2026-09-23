@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b8x0axiy50tks"]
+
+[ext_resource type="Script" uid="uid://xo1uprit5bgh" path="res://ui/inventory/inventory_tabs.gd" id="1_hgwhb"]
+
+[node name="InventoryTabs" type="TabContainer" unique_id=1122406481]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+script = ExtResource("1_hgwhb")
+
+[node name="Equipments" type="HFlowContainer" parent="." unique_id=146609296]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Resources" type="HFlowContainer" parent="." unique_id=1511395493]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Recipes" type="HFlowContainer" parent="." unique_id=788865063]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Keys" type="HFlowContainer" parent="." unique_id=1097772421]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3

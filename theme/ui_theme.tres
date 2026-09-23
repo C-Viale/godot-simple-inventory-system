@@ -1,0 +1,24 @@
+[gd_resource type="Theme" format=3 uid="uid://df5ekao7bsl6d"]
+
+[ext_resource type="StyleBox" uid="uid://can3xgqbivnex" path="res://theme/stylebox_flat_panel.tres" id="1_27v6b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6e2le"]
+bg_color = Color(0.16470589, 0.43529412, 0.6627451, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_715v5"]
+bg_color = Color(0.049302235, 0.190074, 0.3078416, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8aw70"]
+color = Color(0.16470589, 0.43529412, 0.6627451, 1)
+thickness = 4
+vertical = true
+
+[resource]
+Button/styles/normal = SubResource("StyleBoxFlat_6e2le")
+PanelContainer/styles/panel = ExtResource("1_27v6b")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_715v5")
+VSeparator/styles/separator = SubResource("StyleBoxLine_8aw70")

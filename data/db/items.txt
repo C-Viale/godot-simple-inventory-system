@@ -1,0 +1,11 @@
+stick         ;RESOURCE     ;Stick            ;Found near trees and bushes.          ;stick.png       ;
+shell         ;RESOURCE     ;Shell            ;Some people love to collect them.     ;shell.png       ;
+stone         ;RESOURCE     ;Stone            ;Don't throw it at someone.            ;stone.png       ;
+wood          ;RESOURCE     ;Wood             ;Rough-cut timber for crafting.        ;stick.png       ;
+iron_ore      ;RESOURCE     ;Iron Ore         ;Unrefined metal from the hills.       ;stone.png       ;
+rusty_key     ;KEY          ;Rusty Key        ;Opens old cellar doors.               ;                ; 
+crystal_key   ;KEY          ;Crystal Key      ;Glows faintly in the dark.            ;                ;
+brass_key     ;KEY          ;Brass Key        ;A sturdy key for common locks.        ;                ; 
+fishing_rod   ;TOOL         ;Fishing Rod      ;Cast a line and wait.                 ;fishing_rod.png ;
+pickaxe       ;TOOL         ;Pickaxe          ;Breaks rock and ore nodes.            ;pickaxe.png     ;
+hatchet       ;TOOL         ;Hatchet          ;Chops small trees quickly.            ;hatchet.png     ;
