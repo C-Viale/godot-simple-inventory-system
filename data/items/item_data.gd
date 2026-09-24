@@ -7,3 +7,6 @@ var icon_path: String = ""
 
 var category: Enums.ItemCategory
 var tradeable = false
+
+func can_equip_in(slot: Enums.EquipmentSlot) -> bool:
+	return false

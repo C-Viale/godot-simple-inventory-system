@@ -17,20 +17,43 @@ var quick_slot_3: ItemData = null
 var inventory_data: Dictionary[StringName, int] = {}
 
 func equip_armor(armor: ArmorData) -> void:
+	if not armor is ArmorData: return
+	
+	var slot: Enums.EquipmentSlot
+	
 	match armor.armor_slot:
-		Enums.ArmorSlot.HELMET: 
+		Enums.EquipmentSlot.HEAD: 
+			slot = Enums.EquipmentSlot.HEAD
 			head = armor
-			EventBus.equipment_changed.emit(armor, Enums.EquipmentSlot.HEAD)
-		Enums.ArmorSlot.CHESTPLATE: 
+		Enums.EquipmentSlot.CHEST: 
+			slot = Enums.EquipmentSlot.CHEST
 			chest = armor
-			EventBus.equipment_changed.emit(armor, Enums.EquipmentSlot.CHEST)
-		Enums.ArmorSlot.LEGGINGS: 
+		Enums.EquipmentSlot.LEGS: 
+			slot = Enums.EquipmentSlot.LEGS
 			legs = armor
-			EventBus.equipment_changed.emit(armor, Enums.EquipmentSlot.LEGS)
-		Enums.ArmorSlot.BOOTS: 
+		Enums.EquipmentSlot.FEET: 
+			slot = Enums.EquipmentSlot.FEET
 			feet = armor
-			EventBus.equipment_changed.emit(armor, Enums.EquipmentSlot.FEET)
+	
+	EventBus.equipment_changed.emit(armor, slot)
 
+func equip_weapon(weapon: WeaponData, slot: Enums.EquipmentSlot) -> void:
+	if slot == Enums.EquipmentSlot.WEAPON_1:
+		if weapon_2 != null and weapon_2.id == weapon.id:
+			weapon_2 = null
+			EventBus.equipment_changed.emit(null, Enums.EquipmentSlot.WEAPON_2)
+		
+		weapon_1 = weapon
+		EventBus.equipment_changed.emit(weapon, Enums.EquipmentSlot.WEAPON_1)
+	
+	if slot == Enums.EquipmentSlot.WEAPON_2:
+		if weapon_1 != null and weapon_1.id == weapon.id:
+			weapon_1 = null
+			EventBus.equipment_changed.emit(null, Enums.EquipmentSlot.WEAPON_1)
+		
+		weapon_2 = weapon
+		EventBus.equipment_changed.emit(weapon, Enums.EquipmentSlot.WEAPON_2)
+	
 func unequip(slot: Enums.EquipmentSlot) -> void:
 	match slot:
 		Enums.EquipmentSlot.HEAD: head = null

@@ -19,21 +19,11 @@ enum WeaponType {
 }
 
 enum EquipmentSlot {
-	HEAD,
-	CHEST,
-	LEGS,
-	FEET,
-	WEAPON_1,
-	WEAPON_2,
+	HEAD, CHEST,LEGS, FEET,
+	WEAPON_1, WEAPON_2,
 	OFFHAND,
-	QUICK_1,
-	QUICK_2,
-	QUICK_3,
+	QUICK_1, QUICK_2, QUICK_3,
 }
 
-enum ArmorSlot {
-	HELMET,
-	CHESTPLATE,
-	LEGGINGS,
-	BOOTS,
-}
+enum ArmorSlot { HELMET, CHESTPLATE, LEGS, BOOTS }
+enum OffhandType { SHIELD, BOOK }

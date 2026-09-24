@@ -34,7 +34,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	
 	control.tree_exited.connect(func(): self.modulate = Color.WHITE)
 	
-	return self
+	return ItemDatabase.get_item(item_id)
 
 func _gui_input(event: InputEvent) -> void:
 	if not event is InputEventMouseButton: return

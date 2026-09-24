@@ -14,14 +14,12 @@ func get_icon(item_id: StringName) -> Texture2D:
 	if _icons.has(item_id): return _icons[item_id]
 
 	var icon_path = _items[item_id].icon_path
-	if icon_path.is_empty(): return null
+	if icon_path.is_empty(): return get_placeholder_icon()
 
 	var path: String = "res://assets/items/%s" % icon_path
 	var texture: Texture2D = load(path) as Texture2D
 	
-	if texture == null:
-		push_warning("ItemDatabase: missing icon at %s" % path)
-		return null
+	if texture == null: return get_placeholder_icon()
 	
 	_icons[item_id] = texture
 	return texture
@@ -90,7 +88,7 @@ func _load_armor() -> void:
 		match data[1].strip_edges():
 			"HELMET": armor.armor_slot = Enums.ArmorSlot.HELMET
 			"CHESTPLATE": armor.armor_slot = Enums.ArmorSlot.CHESTPLATE
-			"LEGGINGS": armor.armor_slot = Enums.ArmorSlot.LEGGINGS
+			"LEGS": armor.armor_slot = Enums.ArmorSlot.LEGS
 			"BOOTS": armor.armor_slot = Enums.ArmorSlot.BOOTS
 		
 		_items[item_id] = armor
