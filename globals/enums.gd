@@ -27,3 +27,5 @@ enum EquipmentSlot {
 
 enum ArmorSlot { HELMET, CHESTPLATE, LEGS, BOOTS }
 enum OffhandType { SHIELD, BOOK }
+
+enum ConsumableType { POTION, FOOD }

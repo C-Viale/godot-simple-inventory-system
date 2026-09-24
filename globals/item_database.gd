@@ -35,6 +35,7 @@ func get_placeholder_icon() -> Texture2D:
 func _ready() -> void:
 	_load_weapons()
 	_load_armor()
+	_load_consumables()
 	_load_items()
 
 func _get_file_lines(path: String) -> PackedStringArray:
@@ -115,3 +116,27 @@ func _load_items() -> void:
 			"TOOL": item.category = Enums.ItemCategory.TOOL
 		
 		_items[item_id] = item
+
+
+func _load_consumables() -> void:	
+	var lines = _get_file_lines("res://data/db/consumables.txt")
+	
+	for line in lines:
+		if line.is_empty(): continue
+		
+		var data = line.split(";")
+		var consumable = ConsumableData.new()
+		var item_id = StringName(data[0].strip_edges())
+		
+		consumable.id = item_id
+		consumable.category = Enums.ItemCategory.CONSUMABLE
+		consumable.name = data[3].strip_edges()
+		consumable.description = data[4].strip_edges()
+		consumable.icon_path = data[5].strip_edges()
+		consumable.tradeable = true
+		
+		match data[1].strip_edges():
+			"FOOD": consumable.consumable_type = Enums.ConsumableType.FOOD
+			"POTION": consumable.consumable_type = Enums.ConsumableType.POTION
+		
+		_items[item_id] = consumable

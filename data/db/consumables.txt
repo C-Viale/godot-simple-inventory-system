@@ -1,0 +1,4 @@
+health_potion      ;POTION;INSTA_HEAL      ;Red Potion     ;Restores a small amount of health.                 ;red_potion.png     ;
+mana_potion     ;POTION;INSTA_MANA      	 ;Blue Potion    ;Restores a small amount of mana.            	;blue_potion.png     ;
+health_mana_potion     ;POTION;INSTA_HEAL_MANA      ;Pink Potion    ;Restores a small amount of health and mana.   ;pink_potion.png     ;
+apple       	;FOOD  ;OT_HEAL    			 ;Apple          ;Restores health over time.            		;     ;

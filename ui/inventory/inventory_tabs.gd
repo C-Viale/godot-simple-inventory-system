@@ -33,7 +33,7 @@ func _get_grid(category: Enums.ItemCategory) -> HFlowContainer:
 		Enums.ItemCategory.WEAPON: return equipments
 		Enums.ItemCategory.OFFHAND: return equipments
 		Enums.ItemCategory.TOOL: return equipments
-		
 		Enums.ItemCategory.ARMOR: return equipments
+		Enums.ItemCategory.CONSUMABLE: return equipments
 		
 	return resources

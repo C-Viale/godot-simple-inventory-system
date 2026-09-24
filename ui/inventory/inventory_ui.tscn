@@ -45,54 +45,59 @@ theme_override_constants/margin_bottom = 16
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer" unique_id=4818086]
 layout_mode = 2
 
-[node name="Equipments" type="HBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1726301250]
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=2067587858]
+layout_mode = 2
+text = "Equipments"
+horizontal_alignment = 1
+
+[node name="EquipmentSlots" type="HBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1726301250]
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_constants/separation = 4
 
-[node name="EquipmentSlot_Offhand" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Equipments" unique_id=733192927 instance=ExtResource("3_8a20s")]
+[node name="EquipmentSlot_Offhand" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/EquipmentSlots" unique_id=733192927 instance=ExtResource("3_8a20s")]
 layout_mode = 2
 slot = 6
 slot_name = "Offhand"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Equipments" unique_id=635120457]
+[node name="ArmorColumn" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/EquipmentSlots" unique_id=635120457]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 
-[node name="EquipmentSlot_Head" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Equipments/VBoxContainer" unique_id=1508230850 instance=ExtResource("3_8a20s")]
+[node name="EquipmentSlot_Head" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/EquipmentSlots/ArmorColumn" unique_id=1508230850 instance=ExtResource("3_8a20s")]
 layout_mode = 2
 size_flags_horizontal = 4
 slot_name = "Head"
 
-[node name="EquipmentSlot_Chest" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Equipments/VBoxContainer" unique_id=310922786 instance=ExtResource("3_8a20s")]
+[node name="EquipmentSlot_Chest" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/EquipmentSlots/ArmorColumn" unique_id=310922786 instance=ExtResource("3_8a20s")]
 layout_mode = 2
 size_flags_horizontal = 4
 slot = 1
 slot_name = "Chest"
 
-[node name="EquipmentSlot_Legs" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Equipments/VBoxContainer" unique_id=1683730812 instance=ExtResource("3_8a20s")]
+[node name="EquipmentSlot_Legs" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/EquipmentSlots/ArmorColumn" unique_id=1683730812 instance=ExtResource("3_8a20s")]
 layout_mode = 2
 size_flags_horizontal = 4
 slot = 2
 slot_name = "Legs"
 
-[node name="EquipmentSlot_Boots" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Equipments/VBoxContainer" unique_id=258990178 instance=ExtResource("3_8a20s")]
+[node name="EquipmentSlot_Boots" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/EquipmentSlots/ArmorColumn" unique_id=258990178 instance=ExtResource("3_8a20s")]
 layout_mode = 2
 size_flags_horizontal = 4
 slot = 3
 slot_name = "Boots"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Equipments" unique_id=1181381895]
+[node name="WeaponColumn" type="VBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/EquipmentSlots" unique_id=1181381895]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="EquipmentSlot_Weapon1" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Equipments/VBoxContainer2" unique_id=721419368 instance=ExtResource("3_8a20s")]
+[node name="EquipmentSlot_Weapon1" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/EquipmentSlots/WeaponColumn" unique_id=721419368 instance=ExtResource("3_8a20s")]
 layout_mode = 2
 slot = 4
 slot_name = "W1"
 
-[node name="EquipmentSlot_Weapon2" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/Equipments/VBoxContainer2" unique_id=881036170 instance=ExtResource("3_8a20s")]
+[node name="EquipmentSlot_Weapon2" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/EquipmentSlots/WeaponColumn" unique_id=881036170 instance=ExtResource("3_8a20s")]
 layout_mode = 2
 slot = 5
 slot_name = "W2"
@@ -107,12 +112,12 @@ layout_mode = 2
 slot = 7
 slot_name = "Q1"
 
-[node name="EquipmentSlot2" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/QuickSlots" unique_id=1630496277 instance=ExtResource("3_8a20s")]
+[node name="EquipmentSlot_Quick2" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/QuickSlots" unique_id=1630496277 instance=ExtResource("3_8a20s")]
 layout_mode = 2
 slot = 8
 slot_name = "Q2"
 
-[node name="EquipmentSlot3" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/QuickSlots" unique_id=1265179258 instance=ExtResource("3_8a20s")]
+[node name="EquipmentSlot_Quick3" parent="MarginContainer/PanelContainer/HBoxContainer/MarginContainer/VBoxContainer/QuickSlots" unique_id=1265179258 instance=ExtResource("3_8a20s")]
 layout_mode = 2
 slot = 9
 slot_name = "Q3"

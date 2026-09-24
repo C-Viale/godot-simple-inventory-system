@@ -5,7 +5,7 @@ This is a really small project built to learn how to create an inventory system 
 There are no management features like grid, slots or weight.
 
 # TODOs
-- [ ] Equip weapons
+- [x] Equip weapons
 - [ ] Equip to quick slots
 - [ ] Sorting/filtering
 - [ ] Improved UI/UX

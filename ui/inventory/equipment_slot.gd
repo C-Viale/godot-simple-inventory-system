@@ -23,6 +23,10 @@ func _drop_data(at_position: Vector2, item: Variant) -> void:
 		PlayerData.equip_weapon(item, slot)
 		return
 	
+	if item is ConsumableData:
+		PlayerData.equip_quick(item, slot)
+		return
+	
 
 func _on_equipment_changed(item: ItemData, slot: Enums.EquipmentSlot) -> void:
 	if self.slot != slot: return

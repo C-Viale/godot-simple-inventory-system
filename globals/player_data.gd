@@ -84,6 +84,15 @@ func equip_item(item: ItemData, slot: Enums.EquipmentSlot) -> void:
 	
 	EventBus.equipment_changed.emit(item, slot)
 
+func equip_quick(consumable: ConsumableData, slot: Enums.EquipmentSlot) -> void:
+	match slot:
+		Enums.EquipmentSlot.QUICK_1: quick_slot_1 = consumable
+		Enums.EquipmentSlot.QUICK_2: quick_slot_2 = consumable
+		Enums.EquipmentSlot.QUICK_3: quick_slot_3 = consumable
+	
+	EventBus.equipment_changed.emit(consumable, slot)
+
+
 
 func TEST_add_item() -> void:
 	add_item(&"stone", 1)
