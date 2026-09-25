@@ -14,6 +14,8 @@ func _ready() -> void:
 func _refresh() -> void:
 	for item_id in PlayerData.inventory_data:
 		inventory_tabs.upsert_item(item_id, PlayerData.inventory_data[item_id])
+	
+	inventory_tabs.refresh()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouse:

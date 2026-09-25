@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c2xpoi6vqiy4f"]
+
+[ext_resource type="Script" uid="uid://bmyq5pmupa5wl" path="res://ui/inventory/inventory_group.gd" id="1_vsy3w"]
+
+[node name="InventoryGroup" type="FoldableContainer" unique_id=404465647]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vsy3w")
+
+[node name="Contents" type="HFlowContainer" parent="." unique_id=1689754839]
+layout_mode = 2

@@ -6,6 +6,7 @@ There are no management features like grid, slots or weight.
 
 # TODOs
 - [x] Equip weapons
-- [ ] Equip to quick slots
+- [x] Equip to quick slots
+- [x] Item groups
 - [ ] Sorting/filtering
 - [ ] Improved UI/UX

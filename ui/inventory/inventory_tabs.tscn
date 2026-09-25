@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b8x0axiy50tks"]
 
 [ext_resource type="Script" uid="uid://xo1uprit5bgh" path="res://ui/inventory/inventory_tabs.gd" id="1_hgwhb"]
+[ext_resource type="PackedScene" uid="uid://c2xpoi6vqiy4f" path="res://ui/inventory/inventory_group.tscn" id="2_xyeql"]
 
 [node name="InventoryTabs" type="TabContainer" unique_id=1122406481]
 anchors_preset = 15
@@ -11,9 +12,34 @@ grow_vertical = 2
 current_tab = 0
 script = ExtResource("1_hgwhb")
 
-[node name="Equipments" type="HFlowContainer" parent="." unique_id=146609296]
+[node name="Equipments" type="ScrollContainer" parent="." unique_id=875221611]
+propagate_maximum_size = true
 layout_mode = 2
 metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Equipments" unique_id=1535340718]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Armor" parent="Equipments/VBoxContainer" unique_id=404465647 instance=ExtResource("2_xyeql")]
+layout_mode = 2
+title = "Armor"
+
+[node name="Weapons" parent="Equipments/VBoxContainer" unique_id=1394955920 instance=ExtResource("2_xyeql")]
+layout_mode = 2
+title = "Weapons"
+
+[node name="Offhand" parent="Equipments/VBoxContainer" unique_id=804906621 instance=ExtResource("2_xyeql")]
+layout_mode = 2
+title = "Offhand"
+
+[node name="Consumables" parent="Equipments/VBoxContainer" unique_id=1427327423 instance=ExtResource("2_xyeql")]
+layout_mode = 2
+title = "Consumables"
+
+[node name="Tools" parent="Equipments/VBoxContainer" unique_id=1857951978 instance=ExtResource("2_xyeql")]
+layout_mode = 2
+title = "Tools"
 
 [node name="Resources" type="HFlowContainer" parent="." unique_id=1511395493]
 visible = false
