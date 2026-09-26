@@ -6,7 +6,6 @@ class_name InventoryUI extends Control
 var item_view_scene: PackedScene = preload("res://ui/inventory/item_view.tscn")
 
 func _ready() -> void:
-	$TEST_AddItemButton.pressed.connect(PlayerData.TEST_add_item)
 	EventBus.inventory_updated.connect(_refresh)
 	EventBus.item_hovered.connect(_on_hover_item)
 	_refresh()

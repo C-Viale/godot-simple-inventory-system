@@ -1,5 +1,9 @@
 extends Node
 
+
+signal notification(text: String)
+
+
 # INVENTORY EVENTS
 signal equipment_changed(item: ItemData, slot: Enums.EquipmentSlot)
 signal inventory_updated()

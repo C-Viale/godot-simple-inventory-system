@@ -129,21 +129,6 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TEST_AddItemButton" type="Button" parent="." unique_id=41718148]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -38.5
-offset_top = -31.0
-offset_right = 38.5
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("2_jm3eq")
-text = "add item"
-
 [node name="ItemTooltip" parent="." unique_id=279173844 instance=ExtResource("5_4l1op")]
 process_mode = 4
 visible = false

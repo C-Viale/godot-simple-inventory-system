@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bf3eplngceipk" path="res://ui/gameplay/gameplay_ui.gd" id="1_a125d"]
 [ext_resource type="PackedScene" uid="uid://ck4pkbm3dox6d" path="res://ui/inventory/inventory_ui.tscn" id="2_dmi33"]
+[ext_resource type="PackedScene" uid="uid://cx0bxsaoyrr63" path="res://ui/debug/debug_ui.tscn" id="3_dmi33"]
 
 [node name="GameplayUi" type="Control" unique_id=1905694299]
 layout_mode = 3
@@ -14,3 +15,18 @@ script = ExtResource("1_a125d")
 
 [node name="InventoryUI" parent="." unique_id=874226730 instance=ExtResource("2_dmi33")]
 layout_mode = 1
+
+[node name="DebugUi" parent="." unique_id=744038114 instance=ExtResource("3_dmi33")]
+layout_mode = 0
+
+[node name="NotificationsContainer" type="VBoxContainer" parent="." unique_id=2047376278]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0

@@ -8,5 +8,7 @@ There are no management features like grid, slots or weight.
 - [x] Equip weapons
 - [x] Equip to quick slots
 - [x] Item groups
+- [ ] Notifications
+- [ ] Context Menu
 - [ ] Sorting/filtering
 - [ ] Improved UI/UX

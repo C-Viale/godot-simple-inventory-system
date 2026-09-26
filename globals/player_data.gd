@@ -92,22 +92,21 @@ func equip_quick(consumable: ConsumableData, slot: Enums.EquipmentSlot) -> void:
 	
 	EventBus.equipment_changed.emit(consumable, slot)
 
-
-
-func TEST_add_item() -> void:
-	add_item(&"stone", 1)
-	EventBus.inventory_updated.emit()
-
-
 func add_item(id: StringName, count: int) -> void:
 	if id.is_empty() or count <= 0: return
 	inventory_data[id] = inventory_data.get(id, 0) + count
+	EventBus.inventory_updated.emit()
+	EventBus.notification.emit("%s x%s" % [id, count])
 
-
+func decrement_item(id: StringName, count: int) -> void:
+	if id.is_empty() or count <= 0: return
+	var new_value: int = inventory_data.get(id, 0) - count
+	inventory_data[id] = maxi(new_value, 0)
+	EventBus.inventory_updated.emit()
 
 func _ready() -> void:
 	load_data()
-	
+
 
 func load_data() -> void:
 	var json = Utils.read_json("res://data/db/players.json")
